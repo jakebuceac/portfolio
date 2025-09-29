@@ -4,8 +4,8 @@ import Tech from "@/app/ui/tech";
 export default function Home() {
   return (
       <main>
-        <div className="space-y-24">
-          <div className="p-4">
+        <div className="space-y-20">
+          <div className="p-4 fade-down">
             <Profile />
           </div>
           <div className="p-4" >
