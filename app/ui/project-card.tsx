@@ -1,0 +1,79 @@
+import Image from "next/image";
+
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  technologies: string[];
+  caseStudyLink: string | null | undefined;
+  gitHubLink: string | null | undefined;
+};
+
+export default function ProjectCard({
+    title,
+    description,
+    imageSrc,
+    imageAlt,
+    technologies,
+    caseStudyLink,
+    gitHubLink,
+}: ProjectCardProps) {
+    return (
+        <div className="flex flex-col md:flex-row gap-5 rounded-lg bg-gray-50 p-4">
+            <div className="md:mr-4 mx-auto flex-shrink-0">
+                <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    width={400}
+                    height={400}
+                    className="rounded-lg border border-gray-200 shadow"
+                />
+            </div>
+            <div className="max-w-md flex flex-col md:flex-1 justify-between">
+                <div className="space-y-5">
+                <h4 className="text-xl font-semibold">{title}</h4>
+                <div className="flex flex-wrap gap-2">
+                    <p>{description}</p>
+                </div>
+                <div className="flex flex-wrap gap-2 justify-start">
+                    {technologies.map((tech) => (
+                    <span
+                        key={tech}
+                        className="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded"
+                    >
+                        {tech}
+                    </span>
+                    ))}
+                </div>
+                </div>
+                <div className="mt-5">
+                    <div className="flex flex-row space-x-2">
+                        {caseStudyLink && (
+                            <a
+                                href={caseStudyLink}
+                                className="hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Case Study
+                            </a>
+                        )}
+                        {gitHubLink && (
+                            <>
+                                <a
+                                    href={gitHubLink}
+                                    className="hover:underline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+                            </>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

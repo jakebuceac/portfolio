@@ -17,6 +17,8 @@ export default function Tech() {
             label: 'Frameworks/Libraries',
             content: [
                 { name: "Laravel", icon: "/icons/laravel-icon.svg" },
+                { name: "Livewire", icon: "/icons/livewire-icon.svg" },
+                { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
                 { name: "Symfony", icon: "/icons/symfony-icon.svg" },
                 { name: "React.js", icon: "/icons/reactjs-icon.svg" },
                 { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
@@ -42,7 +44,7 @@ export default function Tech() {
         <div>
             <div>
                 <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-                    Tech I Work With
+                    Tech I've Worked With
                 </h3>
             </div>
             <div className='mt-5'>
@@ -69,7 +71,7 @@ export default function Tech() {
                                 {tech.content.map((item) => (
                                     <div 
                                         key={item.name} 
-                                        className="flex flex-col items-center"
+                                        className="flex flex-col items-center rounded-lg py-3"
                                     >
                                         <div className="mb-2 relative">
                                             <Image 

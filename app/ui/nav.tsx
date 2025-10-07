@@ -10,7 +10,7 @@ export default function Nav() {
     return (
         <nav className="fixed w-full p-3 z-50 bg-white shadow-md">
             <div className="hidden md:flex justify-center space-x-4">
-                <NavLinks />
+                <NavLinks onLinkClick={() => setMobileOpen(false)} />
             </div>
 
             <div className="md:hidden flex justify-end">
@@ -23,7 +23,7 @@ export default function Nav() {
             </div>
             {mobileOpen && (
                 <div className="w-full p-4 md:hidden">
-                    <NavLinks />
+                    <NavLinks onLinkClick={() => setMobileOpen(false)} />
                 </div>
             )}
         </nav>

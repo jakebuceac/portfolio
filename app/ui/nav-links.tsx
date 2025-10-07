@@ -6,12 +6,16 @@ import { usePathname } from "next/navigation";
 
 const links = [
     { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'About', href: '/about' },
+    { name: 'Tech', href: '#tech' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '/contact' },
 ];
 
-export default function NavLinks() {
+type NavLinksProps = {
+  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>;
+};
+
+export default function NavLinks({ onLinkClick }: NavLinksProps) {
     const pathname = usePathname();
 
     return (
@@ -20,6 +24,7 @@ export default function NavLinks() {
                 <Link 
                     key={link.name}
                     href={link.href}
+                    onClick={onLinkClick}
                     className={clsx(
                         "px-3 py-2",
                         {
