@@ -32,27 +32,27 @@ export default function ProjectCard({
             </div>
             <div className="max-w-md flex flex-col md:flex-1 justify-between">
                 <div className="space-y-5">
-                <h4 className="text-xl font-semibold">{title}</h4>
-                <div className="flex flex-wrap gap-2">
-                    <p>{description}</p>
+                    <h4 className="text-xl font-semibold">{title}</h4>
+                    <div className="flex flex-wrap gap-2">
+                        <p>{description}</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 justify-start">
+                        {technologies.map((tech) => (
+                        <span
+                            key={tech}
+                            className="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded"
+                        >
+                            {tech}
+                        </span>
+                        ))}
+                    </div>
                 </div>
-                <div className="flex flex-wrap gap-2 justify-start">
-                    {technologies.map((tech) => (
-                    <span
-                        key={tech}
-                        className="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded"
-                    >
-                        {tech}
-                    </span>
-                    ))}
-                </div>
-                </div>
-                <div className="mt-5">
+                <div className="mt-6">
                     <div className="flex flex-row space-x-2">
                         {caseStudyLink && (
                             <a
                                 href={caseStudyLink}
-                                className="hover:underline"
+                                className="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-300 rounded transition"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -63,7 +63,7 @@ export default function ProjectCard({
                             <>
                                 <a
                                     href={gitHubLink}
-                                    className="hover:underline"
+                                    className="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-300 rounded transition"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

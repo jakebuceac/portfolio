@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProjectCard from "@/app/ui/project-card";
+import Card from "@/app/ui/card";
 
 export default function FeaturedProjects() {
     const projects = [
@@ -14,7 +15,7 @@ export default function FeaturedProjects() {
         },
         {
             title: "American Red Cross Blood Donor App",
-            description: "Maintained and supported the API powering the American Red Cross mobile app, ensuring reliable data delivery and seamless integration with the app’s front-end features.",
+            description: "Maintained and supported the API powering the American Red Cross Blood Donor mobile app, ensuring reliable data delivery and seamless integration with the app’s front-end features.",
             imageSrc: "/blood-preview.png",
             imageAlt: "American Red Cross Blood Donor Project Preview",
             technologies: ["PHP", "Laravel", "MySQL", "Redis"],
@@ -22,10 +23,10 @@ export default function FeaturedProjects() {
             gitHubLink: null
         },
         {
-            title: "E-Card Generator App",
+            title: "E-Card Generator Web App",
             description: "Designed and built a web app that integrated with OpenAI's Text to Image API, to automatically create e-cards.",
             imageSrc: "/e-card-generator-preview.png",
-            imageAlt: "American Red Cross Blood Donor Project Preview",
+            imageAlt: "E-Card Generator Web App Project Preview",
             technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean"],
             caseStudyLink: "",
             gitHubLink: "https://github.com/jakebuceac/e-card-generator-app"
@@ -33,13 +34,13 @@ export default function FeaturedProjects() {
     ];
 
     return (
-        <div>
+        <Card>
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">Featured Projects</h3>
             <div className="mt-5 space-y-5">
                 {projects.map((project) => (
                     <ProjectCard key={project.title} {...project} />
                 ))}
             </div>
-        </div>
+        </Card>
     );
 }

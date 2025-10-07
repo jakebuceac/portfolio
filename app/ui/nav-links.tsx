@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 
 const links = [
     { name: 'Home', href: '/' },
-    { name: 'Tech', href: '#tech' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '/contact' },
 ];
@@ -26,7 +27,7 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
                     href={link.href}
                     onClick={onLinkClick}
                     className={clsx(
-                        "px-3 py-2",
+                        "px-3 py-2 text-lg",
                         {
                             'font-semibold': pathname === link.href,
                         }

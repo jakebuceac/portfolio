@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { Button } from "@/app/ui/button";
 import * as Tabs from "@radix-ui/react-tabs";
+import Card from './card';
 
-export default function Tech() {
+export default function Skills() {
     const techStack = [
         { 
             label: 'Languages', 
@@ -17,9 +18,9 @@ export default function Tech() {
             label: 'Frameworks/Libraries',
             content: [
                 { name: "Laravel", icon: "/icons/laravel-icon.svg" },
+                { name: "Symfony", icon: "/icons/symfony-icon.svg" },
                 { name: "Livewire", icon: "/icons/livewire-icon.svg" },
                 { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
-                { name: "Symfony", icon: "/icons/symfony-icon.svg" },
                 { name: "React.js", icon: "/icons/reactjs-icon.svg" },
                 { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
                 { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
@@ -41,12 +42,10 @@ export default function Tech() {
     ];
 
     return (
-        <div>
-            <div>
-                <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-                    Tech I've Worked With
-                </h3>
-            </div>
+        <Card className='min-h-[460px]'>
+            <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
+                Soft Skills
+            </h3>
             <div className='mt-5'>
                 <Tabs.Root defaultValue="Languages">
                     <Tabs.List aria-label="Tech Stack Tabs">
@@ -65,13 +64,13 @@ export default function Tech() {
                         <Tabs.Content 
                             key={tech.label} 
                             value={tech.label} 
-                            className="mt-10 fade-down"
+                            className="mt-10"
                         >
-                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                            <div className="trickle grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-6">
                                 {tech.content.map((item) => (
                                     <div 
                                         key={item.name} 
-                                        className="flex flex-col items-center rounded-lg py-3"
+                                        className="flex flex-col items-center bg-gray-50 shadow rounded-lg py-3 trickle-item"
                                     >
                                         <div className="mb-2 relative">
                                             <Image 
@@ -89,6 +88,6 @@ export default function Tech() {
                     ))}
                 </Tabs.Root>
             </div>
-        </div>
+        </Card>
     );
 }
