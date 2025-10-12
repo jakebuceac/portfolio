@@ -66,7 +66,7 @@ export default function Skills() {
                             value={tech.label} 
                             className="mt-10"
                         >
-                            <div className="trickle grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-6">
+                            <div className="trickle grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6">
                                 {tech.content.map((item) => (
                                     <div 
                                         key={item.name} 
