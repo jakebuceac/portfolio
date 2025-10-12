@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="pt-26 md:pt-30">
       <div className="space-y-15">
-        <section id="landing" className="scroll-mt-16 md:scroll-mt-20 p-4">
+        <section id="home" className="scroll-mt-16 md:scroll-mt-20 p-4">
           <div className="flex justify-center">
             <div className='flex-1 text-center'>
                 <h1 className="text-5xl sm:text-7xl font-semibold leading-snug">

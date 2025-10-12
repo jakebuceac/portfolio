@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import clsx from 'clsx';
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const links = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '#contact' },
 ];
 
 type NavLinksProps = {
@@ -17,26 +17,69 @@ type NavLinksProps = {
 };
 
 export default function NavLinks({ onLinkClick }: NavLinksProps) {
-    const pathname = usePathname();
+    const [active, setActive] = useState<string>(); // Home default
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 100; // offset for sticky header
+            let current: string | null = null;
+
+            for (const link of links) {
+                if (link.href.startsWith('#')) {
+                    const section = document.querySelector(link.href);
+
+                    if (section && section.offsetTop <= scrollPosition) {
+                        current = link.href;
+                    }
+                }
+            }
+
+            setActive(current ?? '/');
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <>
-            {links.map((link) => (
-                <Link 
-                    key={link.name}
-                    href={link.href}
-                    onClick={onLinkClick}
-                    className={clsx(
-                        "px-3 py-2 text-lg",
-                        {
-                            'font-semibold': pathname === link.href,
-                        }
-                    )}    
-                >
-                    <p>{link.name}</p>
-                </Link>
-            ))}
-
+            {links.map((link) => {
+                if (link.href === '/') {
+                    return (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            className={clsx(
+                                "px-3 py-2 text-lg",
+                                {
+                                    'font-semibold': active === link.href,
+                                }
+                            )}    
+                        >
+                            {link.name}
+                        </a>
+                    );
+                }
+                
+                return (
+                    <Link 
+                        key={link.name}
+                        href={link.href}
+                        onClick={onLinkClick}
+                        prefetch={link.href === '/'}
+                        className={clsx(
+                            "px-3 py-2 text-lg",
+                            {
+                                'font-semibold': active === link.href,
+                            }
+                        )}    
+                    >
+                        {link.name}
+                    </Link>
+                )
+            })}
         </>
     );
 }
