@@ -1,48 +1,73 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from "@/app/ui/button";
 import * as Tabs from "@radix-ui/react-tabs";
-import Card from './card';
+import Card from '@/app/ui/card';
 
 export default function Skills() {
-    const techStack = [
-        { 
-            label: 'Languages', 
-            content: [
-                { name: "PHP", icon: "/icons/php-icon.svg" },
-                { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
-                { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
-                { name: "Go", icon: "/icons/go-icon.svg" },
-            ]
-        },
-        {
-            label: 'Frameworks/Libraries',
-            content: [
-                { name: "Laravel", icon: "/icons/laravel-icon.svg" },
-                { name: "Symfony", icon: "/icons/symfony-icon.svg" },
-                { name: "Livewire", icon: "/icons/livewire-icon.svg" },
-                { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
-                { name: "React.js", icon: "/icons/reactjs-icon.svg" },
-                { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
-                { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
-                { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
-                { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
-                { name: "Bootstrap", icon: "/icons/bootstrap-icon.svg" },
-            ]
-        },
-        {
-            label: 'Cloud/DevOps',
-            content: [
-                { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
-                { name: "Docker", icon: "/icons/docker-icon.svg" },
-                { name: "MySQL", icon: "/icons/mysql-icon.svg" },
-                { name: "Redis", icon: "/icons/redis-icon.svg" },
-            ]
-        }
-        
-    ];
+const techStack = [
+    { 
+        label: 'Languages', 
+        content: [
+            { name: "PHP", icon: "/icons/php-icon.svg" },
+            { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
+            { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
+            { name: "Go", icon: "/icons/go-icon.svg" },
+        ]
+    },
+    {
+        label: 'Frameworks/Libraries',
+        content: [
+            { name: "Laravel", icon: "/icons/laravel-icon.svg" },
+            { name: "Symfony", icon: "/icons/symfony-icon.svg" },
+            { name: "Livewire", icon: "/icons/livewire-icon.svg" },
+            { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
+            { name: "React.js", icon: "/icons/reactjs-icon.svg" },
+            { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
+            { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
+            { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
+            { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
+            { name: "Bootstrap", icon: "/icons/bootstrap-icon.svg" },
+        ]
+    },
+    {
+        label: 'Cloud/DevOps',
+        content: [
+            { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
+            { name: "Docker", icon: "/icons/docker-icon.svg" },
+            { name: "MySQL", icon: "/icons/mysql-icon.svg" },
+            { name: "Redis", icon: "/icons/redis-icon.svg" },
+        ]
+    }
+    
+];
 
-    return (
-        <Card className='min-h-[460px]'>
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 } // 50% visible triggers animation
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <Card className='min-h-[460px]'>
+        <div ref={sectionRef}>
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
                 Soft Skills
             </h3>
@@ -66,7 +91,7 @@ export default function Skills() {
                             value={tech.label} 
                             className="mt-10"
                         >
-                            <div className="trickle grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6">
+                            <div className={`trickle grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6 ${visible ? 'trickle-visible' : ''}`}>
                                 {tech.content.map((item) => (
                                     <div 
                                         key={item.name} 
@@ -88,6 +113,7 @@ export default function Skills() {
                     ))}
                 </Tabs.Root>
             </div>
-        </Card>
-    );
+        </div>
+    </Card>
+  );
 }
