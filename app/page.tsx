@@ -1,8 +1,9 @@
 import About from "@/app/ui/about";
-import FeaturedProjects from "./ui/featured-projects";
+import FeaturedProjects from "@/app/ui/featured-projects";
 import { Button } from "@/app/ui/button";
 import Contact from "@/app/ui/contact";
 import Skills from "@/app/ui/skills";
+import Socials from "@/app/ui/socials";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="scroll-mt-16 md:scroll-mt-20  p-4 mt-30 fade-down">
+        <section id="about" className="scroll-mt-16 md:scroll-mt-20 p-4 mt-30 fade-down">
           <About />
         </section>
         <section id="skills" className="scroll-mt-16 md:scroll-mt-20 p-4">
@@ -32,6 +33,16 @@ export default function Home() {
         </section>
         <section id="projects" className="scroll-mt-16 md:scroll-mt-20 p-4">
           <FeaturedProjects />
+        </section>
+        <section id="contact" className="scroll-mt-16 md:scroll-mt-20 p-4">
+          <div className="flex lg:flex-row flex-col gap-10 lg:gap-20">
+            <div className="flex-1 lg:max-w-xs">
+              <Socials />
+            </div>
+            <div className="md:max-w-auto flex-1 order-first lg:order-last">
+              <Contact />
+            </div>
+          </div>
         </section>
       </div>
     </main>
