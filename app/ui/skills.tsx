@@ -1,51 +1,63 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from "@/app/ui/button";
 import * as Tabs from "@radix-ui/react-tabs";
 import Card from '@/app/ui/card';
 
 export default function Skills() {
-const techStack = [
-    { 
-        label: 'Languages', 
-        content: [
-            { name: "PHP", icon: "/icons/php-icon.svg" },
-            { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
-            { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
-            { name: "Go", icon: "/icons/go-icon.svg" },
-        ]
-    },
-    {
-        label: 'Frameworks/Libraries',
-        content: [
-            { name: "Laravel", icon: "/icons/laravel-icon.svg" },
-            { name: "Symfony", icon: "/icons/symfony-icon.svg" },
-            { name: "Livewire", icon: "/icons/livewire-icon.svg" },
-            { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
-            { name: "React.js", icon: "/icons/reactjs-icon.svg" },
-            { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
-            { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
-            { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
-            { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
-            { name: "Bootstrap", icon: "/icons/bootstrap-icon.svg" },
-        ]
-    },
-    {
-        label: 'Cloud/DevOps',
-        content: [
-            { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
-            { name: "Docker", icon: "/icons/docker-icon.svg" },
-            { name: "MySQL", icon: "/icons/mysql-icon.svg" },
-            { name: "Redis", icon: "/icons/redis-icon.svg" },
-        ]
-    }
-    
-];
-
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+    const techStack = [
+        { 
+            label: 'Languages', 
+            content: [
+                { name: "PHP", icon: "/icons/php-icon.svg" },
+                { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
+                { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
+                { name: "Go", icon: "/icons/go-icon.svg" },
+            ]
+        },
+        {
+            label: 'Frameworks/Libraries',
+            content: [
+                { name: "Laravel", icon: "/icons/laravel-icon.svg" },
+                { name: "Symfony", icon: "/icons/symfony-icon.svg" },
+                { name: "Livewire", icon: "/icons/livewire-icon.svg" },
+                { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
+                { name: "React.js", icon: "/icons/reactjs-icon.svg" },
+                { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
+                { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
+                { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
+                { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
+                { name: "Bootstrap", icon: "/icons/bootstrap-icon.svg" },
+            ]
+        },
+        {
+            label: 'Cloud/DevOps',
+            content: [
+                { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
+                { name: "Docker", icon: "/icons/docker-icon.svg" },
+                { name: "MySQL", icon: "/icons/mysql-icon.svg" },
+                { name: "Redis", icon: "/icons/redis-icon.svg" },
+            ]
+        }
+        
+    ];
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [visible, setVisible] = useState(false);
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.05,
+            },
+        },
+    };
+    const itemVariants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: { opacity: 1, y: 0 },
+    };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -91,24 +103,25 @@ const techStack = [
                             value={tech.label} 
                             className="mt-10"
                         >
-                            <div className={`trickle grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6 ${visible ? 'trickle-visible' : ''}`}>
+                            <motion.div
+                                className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6"
+                                variants={containerVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
                                 {tech.content.map((item) => (
-                                    <div 
-                                        key={item.name} 
-                                        className="flex flex-col items-center bg-gray-50 shadow rounded-lg py-3 trickle-item"
+                                    <motion.div
+                                        key={item.name}
+                                        className="flex flex-col items-center bg-gray-50 shadow rounded-lg py-3"
+                                        variants={itemVariants}
                                     >
                                         <div className="mb-2 relative">
-                                            <Image 
-                                                src={item.icon} 
-                                                alt={`${item.name} icon`} 
-                                                width={50}
-                                                height={50}
-                                            />
+                                            <Image src={item.icon} alt={`${item.name} icon`} width={50} height={50} />
                                         </div>
                                         <small>{item.name}</small>
-                                    </div>
+                                    </motion.div>
                                 ))}
-                            </div>
+                            </motion.div>
                         </Tabs.Content>
                     ))}
                 </Tabs.Root>

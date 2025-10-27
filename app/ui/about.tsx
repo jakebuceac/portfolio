@@ -16,7 +16,9 @@ export default function About() {
                         About
                     </h3>
                     <p className="mt-5 sm:text-lg">
-                        I am a software engineer with experience in building web applications and API's using modern PHP technologies. I enjoy solving problems and learning new things.
+                        I'm Jake Buceac, a Software Engineer from Bournemouth, England.
+                        I specialise in crafting seamless digital experiences.
+                        Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I'm a PHP Developer building web applications and API endpoints for in2tel.
                     </p>
                     <div className='mt-8 space-x-4'>
                         {socials.map((social) => (
@@ -38,8 +40,8 @@ export default function About() {
                         src="/profile-pic.JPG"
                         className="rounded-full" 
                         alt="Profile picture of Jake Buceac"
-                        width={150}
-                        height={150}
+                        width={170}
+                        height={170}
                     />
                 </div>
             </div>
