@@ -21,7 +21,8 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 100; // offset for sticky header
+            const scrollPosition = window.scrollY + 300; // offset for sticky header
+            
             let current: string | null = null;
 
             for (const link of links) {

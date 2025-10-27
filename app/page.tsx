@@ -7,8 +7,8 @@ import Socials from "@/app/ui/socials";
 
 export default function Home() {
   return (
-    <main className="pt-26 md:pt-30">
-      <div className="space-y-15">
+    <main className="pt-26 md:pt-30 min-h-screen">
+      <div className="space-y-32">
         <section id="home" className="scroll-mt-16 md:scroll-mt-20 p-4">
           <div className="flex justify-center">
             <div className='flex-1 text-center'>
@@ -25,16 +25,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="scroll-mt-16 md:scroll-mt-20 p-4 mt-30 fade-down">
+        <section id="about" className="scroll-mt-50 p-4 mt-30 fade-down min-h-screen">
           <About />
         </section>
-        <section id="skills" className="scroll-mt-16 md:scroll-mt-20 p-4">
+        <section id="skills" className="scroll-mt-50 p-4">
             <Skills />
         </section>
-        <section id="projects" className="scroll-mt-16 md:scroll-mt-20 p-4">
+        <section id="projects" className="scroll-mt-32 p-4">
           <FeaturedProjects />
         </section>
-        <section id="contact" className="scroll-mt-16 md:scroll-mt-20 p-4">
+        <section id="contact" className="scroll-mt-32 p-4 lg:mb-32">
           <div className="flex lg:flex-row flex-col gap-10 lg:gap-20">
             <div className="flex-1 lg:max-w-xs">
               <Socials />

@@ -20,17 +20,17 @@ export default function ProjectCard({
     gitHubLink,
 }: ProjectCardProps) {
     return (
-        <div className="flex flex-col md:flex-row gap-5 rounded-lg bg-gray-50 p-4">
-            <div className="md:mr-4 mx-auto flex-shrink-0">
+        <div className="flex flex-col lg:flex-row gap-5 rounded-lg bg-gray-50 p-4">
+            <div className="lg:mr-4 mx-auto flex-shrink-0">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                     className="rounded-lg border border-gray-200 shadow"
                 />
             </div>
-            <div className="max-w-md flex flex-col md:flex-1 justify-between">
+            <div className="max-w-xl flex flex-col lg:flex-1 justify-between">
                 <div className="space-y-5">
                     <h4 className="text-xl font-semibold">{title}</h4>
                     <div className="flex flex-wrap gap-2">
