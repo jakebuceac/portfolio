@@ -67,7 +67,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-between mt-5"> 
+                <div className="flex items-center justify-between mt-6"> 
                     <div className="text-left">
                         {isSuccess && (
                             <p className="mt-4 text-green-600 text-sm font-medium">
@@ -75,7 +75,7 @@ export default function Contact() {
                             </p>
                         )}
                     </div>
-                    <div className="text-right mt-3">
+                    <div className="text-right">
                         <Button type="submit" className='bg-black text-white'>Send</Button>
                     </div>
                 </div>

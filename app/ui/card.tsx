@@ -5,7 +5,7 @@ export default function Card({ children, className, }: { children: React.ReactNo
     return (
         <div
             className={clsx(
-                'rounded-lg border border-gray-200 shadow p-10',
+                'rounded-lg border border-gray-200 shadow p-10 h-full',
                 className,
             )}
         >

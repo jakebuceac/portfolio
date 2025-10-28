@@ -68,11 +68,11 @@ export default function Home() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="flex lg:flex-row flex-col gap-10 lg:gap-20">
+          <div className="flex lg:flex-row flex-col gap-10 lg:gap-20 items-stretch">
             <div className="flex-1 lg:max-w-xs">
               <Socials />
             </div>
-            <div className="md:max-w-auto flex-1 order-first lg:order-last">
+            <div className="flex-1 md:max-w-auto order-first lg:order-last">
               <Contact />
             </div>
           </div>
