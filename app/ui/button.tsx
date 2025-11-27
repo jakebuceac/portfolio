@@ -10,7 +10,8 @@ export function Button({ children, className, type = 'button', ...rest }: Button
       type={type}
       {...rest}
       className={clsx(
-        'rounded-lg px-4 py-2 font-medium focus-visible:outline-2 aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
+        'rounded-lg px-4 py-2 font-medium focus-visible:outline-2 transition-opacity',
+        'disabled:opacity-50 disabled:cursor-not-allowed',
         className,
       )}
     >

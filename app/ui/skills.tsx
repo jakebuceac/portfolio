@@ -13,9 +13,11 @@ export default function Skills() {
             label: 'Languages', 
             content: [
                 { name: "PHP", icon: "/icons/php-icon.svg" },
+                { name: "Go", icon: "/icons/go-icon.svg" },
+                { name: "HTML", icon: "/icons/html-icon.svg" },
+                { name: "CSS", icon: "/icons/css-icon.svg" },
                 { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
                 { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
-                { name: "Go", icon: "/icons/go-icon.svg" },
             ]
         },
         {
