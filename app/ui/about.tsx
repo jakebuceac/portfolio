@@ -20,7 +20,7 @@ export default function About() {
                         I specialise in crafting seamless digital experiences.
                         Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I'm a PHP Developer building web applications and API endpoints for in2tel.
                     </p>
-                    <div className='mt-8 space-x-4'>
+                    <div className='mt-8 flex flex-wrap gap-4'>
                         {socials.map((social) => (
                             <Button
                                 key={social.name}

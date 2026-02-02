@@ -10,7 +10,7 @@ import Socials from "@/app/ui/socials";
 
 export default function Home() {
   return (
-    <main className="pt-26 md:pt-30">
+    <main className="pt-26 md:pt-30 overflow-x-hidden">
       <div className="space-y-32">
         <div className="flex justify-center">
           <div className='flex-1 text-center'>

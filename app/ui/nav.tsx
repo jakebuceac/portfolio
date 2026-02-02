@@ -15,7 +15,7 @@ return (
       </nav>
 
       {/* Mobile Nav */}
-      <nav className="sm:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4">
+      <nav className="sm:hidden fixed top-4 inset-x-4 z-50">
         <div className="bg-white shadow-md rounded-3xl overflow-hidden">
           <div className="flex justify-end items-center px-2 py-2">
             <button

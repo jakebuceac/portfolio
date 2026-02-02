@@ -87,7 +87,7 @@ export default function Skills() {
             </h3>
             <div className='mt-5'>
                 <Tabs.Root defaultValue="Languages">
-                    <Tabs.List aria-label="Tech Stack Tabs">
+                    <Tabs.List aria-label="Tech Stack Tabs" className='flex flex-wrap gap-2'>
                         {techStack.map((tech) => (
                             <Tabs.Trigger 
                                 key={tech.label} 
