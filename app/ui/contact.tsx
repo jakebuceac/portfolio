@@ -7,7 +7,7 @@ import { useActionState } from "react";
 
 export default function Contact() {
     const initialState: State = {errors: {}}
-    const [state, formAction] = useActionState(sendEmail, initialState)
+    const [state, formAction, isPending] = useActionState(sendEmail, initialState)
     const isSuccess = state.message && (!state.errors || Object.keys(state.errors).length === 0);
     
     return (
@@ -76,7 +76,14 @@ export default function Contact() {
                         )}
                     </div>
                     <div className="text-right">
-                        <Button type="submit" className='bg-black text-white cursor-pointer'>Send</Button>
+                        <Button type="submit" className='bg-black text-white cursor-pointer' disabled={isPending}>
+                            <div className="flex items-center gap-2">
+                                <span>{isPending ? 'Sending...' : 'Send'}</span>
+                                {isPending && (
+                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                )}
+                            </div>
+                        </Button>
                     </div>
                 </div>
             </form>
