@@ -11,16 +11,16 @@ export default function Contact() {
     const isSuccess = state.message && (!state.errors || Object.keys(state.errors).length === 0);
     
     return (
-        <Card>
-            <h3 className="text-2xl md:text-3xl font-semibold leading-snug">Contact Me</h3>
-            <form action={formAction}>
+        <Card className="h-full flex flex-col">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Contact Me</h3>
+            <form action={formAction} className="flex-1 flex flex-col">
                 <div className="mt-5 space-y-5">
                     <div>
                         <input
                             id="name"
                             name="name"
                             placeholder="Name"
-                            className="block w-full rounded-md border border-gray-300 p-3 text-sm  placeholder:text-gray-500"
+                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="name-error"
                         />
@@ -37,7 +37,7 @@ export default function Contact() {
                             id="email"
                             name="email"
                             placeholder="Email"
-                            className="block w-full rounded-md border border-gray-300 p-3 text-sm  placeholder:text-gray-500"
+                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="email-error"
                         />
@@ -54,7 +54,7 @@ export default function Contact() {
                             id="message"
                             name="message"
                             placeholder="Message"
-                            className="block w-full rounded-md border border-gray-300 p-3 text-sm  placeholder:text-gray-500"
+                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all resize-none"
                             required
                             aria-describedby="email-error"
                         />
@@ -67,7 +67,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-between mt-6"> 
+                <div className="flex items-center justify-between mt-auto pt-6"> 
                     <div className="text-left">
                         {isSuccess && (
                             <p className="mt-4 text-green-600 text-sm font-medium">
@@ -76,7 +76,7 @@ export default function Contact() {
                         )}
                     </div>
                     <div className="text-right">
-                        <Button type="submit" className='bg-black text-white cursor-pointer' disabled={isPending}>
+                        <Button type="submit" disabled={isPending}>
                             <div className="flex items-center gap-2">
                                 <span>{isPending ? 'Sending...' : 'Send'}</span>
                                 {isPending && (

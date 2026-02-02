@@ -84,7 +84,7 @@ export default function Skills() {
   return (
     <Card className='min-h-[460px]'>
         <div ref={sectionRef}>
-            <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
                 Soft Skills
             </h3>
             <div className='mt-5'>
@@ -97,7 +97,7 @@ export default function Skills() {
                                 className="mr-2 cursor-pointer"
                                 asChild
                             >
-                                <Button className='tabs-trigger-button'>{tech.label}</Button>
+                                <Button className='tabs-trigger-button border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500 bg-transparent hover:bg-orange-600 dark:hover:bg-orange-600 hover:text-white dark:hover:text-white data-[state=active]:bg-orange-600 data-[state=active]:text-white'>{tech.label}</Button>
                             </Tabs.Trigger>
                         ))}
                     </Tabs.List>

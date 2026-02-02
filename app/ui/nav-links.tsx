@@ -52,9 +52,10 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
                             key={link.name}
                             href={link.href}
                             className={clsx(
-                                "px-3 py-2 text-lg",
+                                "px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200",
                                 {
-                                    'font-semibold': active === link.href,
+                                    'bg-orange-100 dark:bg-orange-950/30 text-orange-700 dark:text-orange-400': active === link.href,
+                                    'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50': active !== link.href,
                                 }
                             )}    
                         >
@@ -70,9 +71,10 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
                         onClick={onLinkClick}
                         prefetch={link.href === '/'}
                         className={clsx(
-                            "px-3 py-2 text-lg",
+                            "px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200",
                             {
-                                'font-semibold': active === link.href,
+                                'bg-orange-100 dark:bg-orange-950/30 text-orange-700 dark:text-orange-400': active === link.href,
+                                'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50': active !== link.href,
                             }
                         )}    
                     >

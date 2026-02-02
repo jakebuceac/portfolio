@@ -11,7 +11,7 @@ export default function Socials() {
     ]
 
     return (
-         <Card>
+         <Card className="h-full flex flex-col">
             <h3 className="text-2xl md:text-3xl font-semibold leading-snug">Socials</h3>
             <div className="flex-1 flex items-center">
                 <div className="flex flex-row lg:flex-col gap-8 mt-5 mx-auto lg:mx-0">
@@ -21,7 +21,7 @@ export default function Socials() {
                             href={social.url || "#"}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-4 text-gray-600 hover:text-gray-900 transition-colors"
+                            className="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition-colors"
                             aria-label={social.name}
                         >
                             <social.icon size={40} />

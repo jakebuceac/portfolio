@@ -12,10 +12,10 @@ export default function About() {
         <Card>
             <div className="flex flex-col sm:flex-row gap-5 w-full">
                 <div className='flex-1 text-left sm:pr-5 order-last sm:order-first max-w-4xl'>
-                    <h3 className="text-2xl sm:text-3xl font-semibold leading-snug">
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
                         About
                     </h3>
-                    <p className="mt-5 sm:text-lg">
+                    <p className="mt-5 md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
                         I'm Jake Buceac, a Software Engineer from Bournemouth, England.
                         I specialise in crafting seamless digital experiences.
                         Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I'm a PHP Developer building web applications and API endpoints for in2tel.
@@ -24,7 +24,7 @@ export default function About() {
                         {socials.map((social) => (
                             <Button
                                 key={social.name}
-                                className="border border-black"
+                                className="border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20"
                             >
                                 <a href={social.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                     <social.icon size={20} />

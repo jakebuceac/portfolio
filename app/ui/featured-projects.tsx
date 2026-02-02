@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
 
     return (
         <Card>
-            <h3 className="text-2xl md:text-3xl font-semibold leading-snug">Featured Projects</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Featured Projects</h3>
             <div className="mt-5 space-y-10">
                 {projects.map((project) => (
                     <ProjectCard key={project.title} {...project} />

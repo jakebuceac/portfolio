@@ -11,24 +11,24 @@ import { FaDownload } from 'react-icons/fa6';
 
 export default function Home() {
   return (
-    <main className="pt-26 md:pt-30 overflow-x-hidden">
-      <div className="space-y-32">
-        <div className="flex justify-center">
-          <div className='flex-1 text-center'>
-            <h1 className="text-5xl sm:text-7xl font-semibold leading-snug">
-              Hi, I&apos;m Jake. <span className="wave-hand">👋</span>
+    <main className="pt-32 md:pt-40 overflow-x-hidden">
+      <div className="space-y-40">
+        <div className="flex justify-center px-4">
+          <div className='flex-1 text-center max-w-3xl'>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Hi, I&apos;m Jake. <span className="wave-hand inline-block">👋</span>
             </h1>
-            <p className="mt-1 md:text-lg">
-              Software Engineer specialising in web development.
+            <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+              Full-stack software engineer crafting beautiful, performant digital experiences.
             </p>
-            <div className="mt-5 space-x-4">
-              <Button className='bg-black text-white cursor-pointer'>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Button>
                 <div className="flex items-center gap-2">
                   Download My CV 
-                  <FaDownload size={12} />
+                  <FaDownload size={14} />
                 </div>
               </Button>
-              <Button className='border border-black cursor-pointer'>Contact Me</Button>
+              <Button className='border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20'>Contact Me</Button>
             </div>
           </div>
         </div>
