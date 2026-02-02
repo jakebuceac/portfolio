@@ -10,9 +10,14 @@ import Socials from "@/app/ui/socials";
 import { FaDownload } from 'react-icons/fa6';
 
 export default function Home() {
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <main className="pt-32 md:pt-40 overflow-x-hidden">
-      <div className="space-y-40">
+      <div className="max-w-5xl mx-auto space-y-20 md:space-y-40">
         <div className="flex justify-center px-4">
           <div className='flex-1 text-center max-w-3xl'>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 dark:text-white">
@@ -28,21 +33,14 @@ export default function Home() {
                   <FaDownload size={14} />
                 </div>
               </Button>
-              <Button className='border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20'>Contact Me</Button>
+              <Button onClick={handleContactClick} className='border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20'>Contact Me</Button>
             </div>
           </div>
         </div>
 
-        <motion.section
-          id="about"
-          className="scroll-mt-50 p-4"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <section id="about" className="p-4">
           <About />
-        </motion.section>
+        </section>
 
         <motion.section
           id="skills"

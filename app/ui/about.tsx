@@ -38,7 +38,7 @@ export default function About() {
                 <div className='flex-shrink-0 relative order-first sm:order-last mx-auto'>
                     <Image 
                         src="/profile-pic.JPG"
-                        className="rounded-full" 
+                        className="rounded-full border border-orange-200 dark:border-orange-900/30 shadow-lg shadow-orange-500/20 dark:shadow-orange-500/10" 
                         alt="Profile picture of Jake Buceac"
                         width={170}
                         height={170}
