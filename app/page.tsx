@@ -7,6 +7,7 @@ import { Button } from "@/app/ui/button";
 import Contact from "@/app/ui/contact";
 import Skills from "@/app/ui/skills";
 import Socials from "@/app/ui/socials";
+import { FaDownload } from 'react-icons/fa6';
 
 export default function Home() {
   return (
@@ -21,8 +22,13 @@ export default function Home() {
               Software Engineer specialising in web development.
             </p>
             <div className="mt-5 space-x-4">
-              <Button className='bg-black text-white'>Download My CV</Button>
-              <Button className='border border-black'>Contact Me</Button>
+              <Button className='bg-black text-white cursor-pointer'>
+                <div className="flex items-center gap-2">
+                  Download My CV 
+                  <FaDownload size={12} />
+                </div>
+              </Button>
+              <Button className='border border-black cursor-pointer'>Contact Me</Button>
             </div>
           </div>
         </div>

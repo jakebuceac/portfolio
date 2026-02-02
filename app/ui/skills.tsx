@@ -39,6 +39,8 @@ export default function Skills() {
             label: 'Cloud/DevOps',
             content: [
                 { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
+                { name: "Vercel", icon: "/icons/vercel-icon.svg" },
+                { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
                 { name: "Docker", icon: "/icons/docker-icon.svg" },
                 { name: "MySQL", icon: "/icons/mysql-icon.svg" },
                 { name: "Redis", icon: "/icons/redis-icon.svg" },
@@ -92,7 +94,7 @@ export default function Skills() {
                             <Tabs.Trigger 
                                 key={tech.label} 
                                 value={tech.label} 
-                                className="mr-2"
+                                className="mr-2 cursor-pointer"
                                 asChild
                             >
                                 <Button className='tabs-trigger-button'>{tech.label}</Button>

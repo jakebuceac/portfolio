@@ -76,7 +76,7 @@ export default function Contact() {
                         )}
                     </div>
                     <div className="text-right">
-                        <Button type="submit" className='bg-black text-white'>Send</Button>
+                        <Button type="submit" className='bg-black text-white cursor-pointer'>Send</Button>
                     </div>
                 </div>
             </form>

@@ -27,7 +27,7 @@ export default function FeaturedProjects() {
             description: "Designed and built a web app that integrated with OpenAI's Text to Image API, to automatically create e-cards.",
             imageSrc: "/e-card-generator-preview.png",
             imageAlt: "E-Card Generator Web App Project Preview",
-            technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean"],
+            technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean", "GitHub Actions"],
             caseStudyLink: "",
             gitHubLink: "https://github.com/jakebuceac/e-card-generator-app"
         },
