@@ -10,14 +10,14 @@ export default function About() {
     ]
     return (
         <Card>
-            <div className="flex flex-col sm:flex-row gap-5 w-full">
-                <div className='flex-1 text-left sm:pr-5 order-last sm:order-first max-w-4xl'>
+            <div className="flex flex-col md:flex-row gap-5 w-full">
+                <div className='flex-1 text-left md:pr-5 order-last md:order-first max-w-4xl'>
                     <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
                         About
                     </h3>
                     <p className="mt-5 md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
                         I'm Jake Buceac, a Software Engineer from Bournemouth, England.
-                        I specialise in crafting seamless digital experiences.
+                        I specialise in architecting scalable applications and robust APIs that power modern businesses.
                         Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I'm a PHP Developer building web applications and API endpoints for in2tel.
                     </p>
                     <div className='mt-8 flex flex-wrap gap-4'>
@@ -35,13 +35,14 @@ export default function About() {
                         ))}
                     </div>
                 </div>
-                <div className='flex-shrink-0 relative order-first sm:order-last mx-auto'>
+                <div className='flex-shrink-0 h-[225px] relative order-first md:order-last mx-auto rounded-full border border-orange-200 dark:border-orange-900/30 shadow-lg shadow-orange-500/20 dark:shadow-orange-500/10 overflow-hidden'>
                     <Image 
                         src="/profile-pic.JPG"
-                        className="rounded-full border border-orange-200 dark:border-orange-900/30 shadow-lg shadow-orange-500/20 dark:shadow-orange-500/10" 
                         alt="Profile picture of Jake Buceac"
                         width={170}
                         height={170}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        priority
                     />
                 </div>
             </div>

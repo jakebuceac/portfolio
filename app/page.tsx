@@ -24,7 +24,7 @@ export default function Home() {
               Hi, I&apos;m Jake. <span className="wave-hand inline-block">👋</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-              Full-stack software engineer crafting beautiful, performant digital experiences.
+              Software engineer building reliable systems and polished applications.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button>

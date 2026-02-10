@@ -21,29 +21,29 @@ export default function Skills() {
             ]
         },
         {
-            label: 'Frameworks/Libraries',
+            label: 'Frameworks & Libraries',
             content: [
                 { name: "Laravel", icon: "/icons/laravel-icon.svg" },
                 { name: "Symfony", icon: "/icons/symfony-icon.svg" },
-                { name: "Livewire", icon: "/icons/livewire-icon.svg" },
-                { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
                 { name: "React.js", icon: "/icons/reactjs-icon.svg" },
                 { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
                 { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
                 { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
+                { name: "Livewire", icon: "/icons/livewire-icon.svg" },
+                { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
                 { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
                 { name: "Bootstrap", icon: "/icons/bootstrap-icon.svg" },
             ]
         },
         {
-            label: 'Cloud/DevOps',
+            label: 'Infrastructure & Data',
             content: [
-                { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
-                { name: "Vercel", icon: "/icons/vercel-icon.svg" },
-                { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
-                { name: "Docker", icon: "/icons/docker-icon.svg" },
                 { name: "MySQL", icon: "/icons/mysql-icon.svg" },
                 { name: "Redis", icon: "/icons/redis-icon.svg" },
+                { name: "Docker", icon: "/icons/docker-icon.svg" },
+                { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
+                { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
+                { name: "Vercel", icon: "/icons/vercel-icon.svg" },
             ]
         }
         

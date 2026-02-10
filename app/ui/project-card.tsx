@@ -21,13 +21,13 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div className="flex flex-col lg:flex-row gap-5 rounded-2xl border border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="lg:mr-4 mx-auto flex-shrink-0">
+            <div className="lg:mr-4 mx-auto flex-shrink-0 rounded-xl border border-orange-200 dark:border-orange-900/30 shadow-sm overflow-hidden">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
                     width={500}
                     height={500}
-                    className="rounded-xl border border-orange-200 dark:border-orange-900/30 shadow-sm"
+                    style={{ width: '450px', height: 'auto', objectFit: 'cover' }}
                 />
             </div>
             <div className="max-w-xl flex flex-col lg:flex-1 justify-between">

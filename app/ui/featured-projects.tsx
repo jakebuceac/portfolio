@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
     const projects = [
         {
             title: "in2tel Customer Portal (Full Stack)",
-            description: "Redesigned and rewrote a customer portal that centralises all telecommunication services in one place.",
+            description: "Redesigned and rewrote a centralised telecom portal serving as the primary interface for both customers and internal staff.",
             imageSrc: "/in2tel-preview.png",
             imageAlt: "in2tel Customer Project Preview",
             technologies: ["PHP", "JavaScript", "Laravel", "Livewire", "Alpine.js", "Bootstrap", "MySQL", "Redis"],
@@ -15,7 +15,7 @@ export default function FeaturedProjects() {
         },
         {
             title: "American Red Cross Blood Donor App (Back End)",
-            description: "Maintained and supported the API powering the American Red Cross Blood Donor mobile app, ensuring reliable data delivery and seamless integration with the app’s front-end features.",
+            description: "Maintained and supported the API powering the American Red Cross Blood Donor mobile app, ensuring reliable data delivery and seamless integration with the app’s front-end.",
             imageSrc: "/blood-preview.png",
             imageAlt: "American Red Cross Blood Donor Project Preview",
             technologies: ["PHP", "Laravel", "MySQL", "Redis"],
@@ -24,7 +24,7 @@ export default function FeaturedProjects() {
         },
         {
             title: "E-Card Generator Web App (Full Stack)",
-            description: "Designed and built a web app that integrated with OpenAI's Text to Image API, to automatically create e-cards.",
+            description: "Engineered a full-stack application exploring the intersection of Generative AI and automated design, using OpenAI's Image API to programmatically generate and deliver personalised e-cards.",
             imageSrc: "/e-card-generator-preview.png",
             imageAlt: "E-Card Generator Web App Project Preview",
             technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean", "GitHub Actions"],

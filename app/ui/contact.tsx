@@ -23,6 +23,7 @@ export default function Contact() {
                             className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="name-error"
+                            autoComplete="name"
                         />
                         <div id="name-error" aria-live="polite" aria-atomic="true">
                             {state.errors?.name && state.errors.name.map((error: string) => (
@@ -40,6 +41,7 @@ export default function Contact() {
                             className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="email-error"
+                            autoComplete="email"
                         />
                         <div id="email-error" aria-live="polite" aria-atomic="true">
                             {state.errors?.email && state.errors.email.map((error: string) => (
