@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProjectCard from "@/app/ui/project-card";
 import Card from "@/app/ui/card";
 

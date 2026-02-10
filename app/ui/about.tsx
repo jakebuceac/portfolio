@@ -16,9 +16,9 @@ export default function About() {
                         About
                     </h3>
                     <p className="mt-5 md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        I'm Jake Buceac, a Software Engineer from Bournemouth, England.
+                        I&apos;m Jake Buceac, a Software Engineer from Bournemouth, England.
                         I specialise in architecting scalable applications and robust APIs that power modern businesses.
-                        Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I'm a PHP Developer building web applications and API endpoints for in2tel.
+                        Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I&apos;m a PHP Developer building web applications and API endpoints for in2tel.
                     </p>
                     <div className='mt-8 flex flex-wrap gap-4'>
                         {socials.map((social) => (

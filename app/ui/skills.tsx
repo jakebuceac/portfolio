@@ -49,7 +49,7 @@ export default function Skills() {
         
     ];
     const sectionRef = useRef<HTMLDivElement>(null);
-    const [visible, setVisible] = useState(false);
+    const [, setVisible] = useState(false);
     const containerVariants = {
         hidden: {},
         visible: {

@@ -26,7 +26,7 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
 
             for (const link of links) {
                 if (link.href.startsWith('#')) {
-                    const section = document.querySelector(link.href);
+                    const section = document.querySelector(link.href) as HTMLElement | null;
 
                     if (section && section.offsetTop <= scrollPosition) {
                         current = link.href;
