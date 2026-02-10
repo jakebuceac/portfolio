@@ -26,28 +26,6 @@ export const metadata: Metadata = {
     'System Architecture'
   ],
   authors: [{ name: 'Jake Buceac' }],
-  openGraph: {
-    title: 'Jake Buceac | Software Engineer',
-    description: 'Architecting scalable applications and robust APIs.',
-    url: 'https://yourportfolio.com', // Replace with your domain
-    siteName: 'Jake Buceac Portfolio',
-    images: [
-      {
-        url: '/og-image.png', // Create a simple 1200x630 image
-        width: 1200,
-        height: 630,
-        alt: 'Jake Buceac | Software Engineer',
-      },
-    ],
-    locale: 'en_GB',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Jake Buceac | Software Engineer',
-    description: 'Software Engineer building reliable systems and polished applications.',
-    images: ['/og-image.png'],
-  },
 };
 
 export default function RootLayout({
