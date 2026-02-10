@@ -13,14 +13,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
-    --accent: #f97316;
-  }
-}
-
 @keyframes wave {
   0% { transform: rotate(0deg); }
   15% { transform: rotate(14deg); }
@@ -66,8 +58,8 @@ body {
       45deg, 
       transparent, 
       transparent 37px,
-      color-mix(in srgb, var(--accent) 4%, transparent) 40px, 
-      color-mix(in srgb, var(--accent) 4%, transparent) 41px
+      color-mix(in srgb, var(--accent) 8%, transparent) 40px, 
+      color-mix(in srgb, var(--accent) 8%, transparent) 41px
     ),
     radial-gradient(at 100% 100%, color-mix(in srgb, var(--foreground) 2%, transparent) 0%, transparent 40%);
   

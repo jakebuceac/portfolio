@@ -20,8 +20,8 @@ export default function ProjectCard({
     gitHubLink,
 }: ProjectCardProps) {
     return (
-        <div className="flex flex-col lg:flex-row gap-5 rounded-2xl border border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="lg:mr-4 mx-auto flex-shrink-0 rounded-xl border border-orange-200 dark:border-orange-900/30 shadow-sm overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-5 rounded-2xl border border-orange-200 bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="lg:mr-4 mx-auto flex-shrink-0 rounded-xl border border-orange-200 shadow-sm overflow-hidden">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
@@ -32,15 +32,15 @@ export default function ProjectCard({
             </div>
             <div className="max-w-xl flex flex-col lg:flex-1 justify-between">
                 <div className="space-y-5">
-                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{title}</h4>
+                    <h4 className="text-2xl font-bold text-slate-900">{title}</h4>
                     <div className="flex flex-wrap gap-2">
-                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{description}</p>
+                        <p className="text-slate-700 leading-relaxed">{description}</p>
                     </div>
                     <div className="flex flex-wrap gap-2 justify-start">
                         {technologies.map((tech) => (
                         <span
                             key={tech}
-                            className="bg-orange-100 dark:bg-orange-950/30 text-orange-700 dark:text-orange-400 text-xs font-semibold px-3 py-1 rounded-full border border-orange-200 dark:border-orange-800/50"
+                            className="bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full border border-orange-200"
                         >
                             {tech}
                         </span>
@@ -52,7 +52,7 @@ export default function ProjectCard({
                         {caseStudyLink && (
                             <a
                                 href={caseStudyLink}
-                                className="text-sm font-medium text-orange-600 dark:text-orange-500 hover:text-orange-700 dark:hover:text-orange-400 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition"
+                                className="text-sm font-medium text-orange-600 hover:text-orange-700 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -63,7 +63,7 @@ export default function ProjectCard({
                             <>
                                 <a
                                     href={gitHubLink}
-                                    className="text-sm font-medium text-orange-600 dark:text-orange-500 hover:text-orange-700 dark:hover:text-orange-400 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition"
+                                    className="text-sm font-medium text-orange-600 hover:text-orange-700 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

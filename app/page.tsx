@@ -23,10 +23,10 @@ export default function Home() {
       <div className="max-w-5xl mx-auto space-y-20 md:space-y-40">
         <div className="flex justify-center px-4">
           <div className='flex-1 text-center max-w-3xl'>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900">
               Hi, I&apos;m Jake. <span className="wave-hand inline-block">👋</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
               Software engineer building reliable systems and polished applications.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -36,7 +36,7 @@ export default function Home() {
                   <FaDownload size={14} />
                 </div>
               </Button>
-              <Button onClick={handleContactClick} className='border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20'>Contact Me</Button>
+              <Button onClick={handleContactClick} className='border-2 border-orange-600 text-orange-600 bg-transparent hover:bg-orange-50'>Contact Me</Button>
             </div>
           </div>
         </div>

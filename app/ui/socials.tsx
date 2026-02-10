@@ -21,7 +21,7 @@ export default function Socials() {
                             href={social.url || "#"}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition-colors"
+                            className="flex items-center gap-4 text-slate-600 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded transition-colors"
                             aria-label={social.name}
                         >
                             <social.icon size={40} />

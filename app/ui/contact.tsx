@@ -12,7 +12,7 @@ export default function Contact() {
     
     return (
         <Card className="h-full flex flex-col">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Contact Me</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900">Contact Me</h3>
             <form action={formAction} className="flex-1 flex flex-col">
                 <div className="mt-5 space-y-5">
                     <div>
@@ -20,7 +20,7 @@ export default function Contact() {
                             id="name"
                             name="name"
                             placeholder="Name"
-                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
+                            className="block w-full rounded-lg border-2 border-orange-200 bg-white p-3 text-sm text-slate-900 placeholder:text-slate-500 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="name-error"
                             autoComplete="name"
@@ -38,7 +38,7 @@ export default function Contact() {
                             id="email"
                             name="email"
                             placeholder="Email"
-                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
+                            className="block w-full rounded-lg border-2 border-orange-200 bg-white p-3 text-sm text-slate-900 placeholder:text-slate-500 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                             required
                             aria-describedby="email-error"
                             autoComplete="email"
@@ -56,7 +56,7 @@ export default function Contact() {
                             id="message"
                             name="message"
                             placeholder="Message"
-                            className="block w-full rounded-lg border-2 border-orange-200 dark:border-orange-900/30 bg-white dark:bg-slate-800 p-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all resize-none"
+                            className="block w-full rounded-lg border-2 border-orange-200 bg-white p-3 text-sm text-slate-900 placeholder:text-slate-500 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all resize-none"
                             required
                             aria-describedby="email-error"
                             rows={5}

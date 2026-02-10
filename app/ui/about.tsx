@@ -12,10 +12,10 @@ export default function About() {
         <Card>
             <div className="flex flex-col md:flex-row gap-5 w-full">
                 <div className='flex-1 text-left md:pr-5 order-last md:order-first max-w-4xl'>
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
                         About
                     </h3>
-                    <p className="mt-5 md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                    <p className="mt-5 md:text-lg text-slate-700 leading-relaxed">
                         I&apos;m Jake Buceac, a Software Engineer from Bournemouth, England.
                         I specialise in architecting scalable applications and robust APIs that power modern businesses.
                         Problem solving, learning new technologies and building cool stuff is what I love to do. Currently, I&apos;m a PHP Developer building web applications and API endpoints for in2tel.
@@ -24,7 +24,7 @@ export default function About() {
                         {socials.map((social) => (
                             <Button
                                 key={social.name}
-                                className="border-2 border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-400 bg-transparent hover:bg-orange-50 dark:hover:bg-orange-950/20"
+                                className="border-2 border-orange-600 text-orange-600 bg-transparent hover:bg-orange-50"
                             >
                                 <a href={social.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                     <social.icon size={20} />
@@ -35,7 +35,7 @@ export default function About() {
                         ))}
                     </div>
                 </div>
-                <div className='flex-shrink-0 h-[225px] relative order-first md:order-last mx-auto rounded-full border border-orange-200 dark:border-orange-900/30 shadow-lg shadow-orange-500/20 dark:shadow-orange-500/10 overflow-hidden'>
+                <div className='flex-shrink-0 h-[225px] relative order-first md:order-last mx-auto rounded-full border border-orange-200 shadow-lg shadow-orange-500/20 overflow-hidden'>
                     <Image 
                         src="/profile-pic.JPG"
                         alt="Profile picture of Jake Buceac"
