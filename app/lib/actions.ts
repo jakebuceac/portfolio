@@ -2,7 +2,6 @@
 
 import { z } from 'zod';
 import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
 
 const ContactFormSchema = z.object({
   name: z.string().min(3).max(35),
@@ -19,7 +18,20 @@ export type State = {
   message?: string | null;
 };
 
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.GMAIL_ADDRESS,
+        pass: process.env.GMAIL_PASSWORD,
+    },
+});
+
 export async function sendEmail(prevStat: State, formData: FormData) {
+    if (!process.env.GMAIL_ADDRESS || !process.env.GMAIL_PASSWORD) {
+      return { message: 'Email service not configured.' };
+    }
+
     const validatedFields = ContactFormSchema.safeParse({
         name: formData.get('name'),
         email: formData.get('email'),
@@ -34,24 +46,29 @@ export async function sendEmail(prevStat: State, formData: FormData) {
     }
 
     const { name, email, message } = validatedFields.data;
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.GMAIL_ADDRESS,
-            pass: process.env.GMAIL_PASSWORD,
-        },
-    });
+    const htmlContent = `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>From:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <hr />
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+    `;
 
   try {
     await transporter.sendMail({
       from: process.env.GMAIL_ADDRESS,
       to: process.env.GMAIL_ADDRESS,
-      subject: `Message from ${name} (${email})`,
+      replyTo: email,
+      subject: `New Contact Form Submission from ${name}`,
       text: message,
+      html: htmlContent,
     });
 
     return { message: 'Message sent successfully!' };
   } catch (err) {
-    return { message: 'Failed to send message.' };
+    console.error('Email send error:', err);
+
+    return { message: 'Failed to send message. Please try again later.' };
   }
 }
