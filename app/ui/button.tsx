@@ -15,7 +15,7 @@ export function Button({ children, className, type = 'button', href, download, .
 
   if (href) {
     return (
-      <a href={href} download={download as any} className={classes} {...(rest as any)}>
+      <a href={href} download={download as boolean | string | undefined} className={classes} {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {children}
       </a>
     );
@@ -23,8 +23,8 @@ export function Button({ children, className, type = 'button', href, download, .
 
   return (
     <button
-      type={type}
-      {...(rest as any)}
+      type={type as React.ButtonHTMLAttributes<HTMLButtonElement>['type']}
+      {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}
       className={classes}
     >
       {children}
