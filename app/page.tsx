@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Nav from "@/app/ui/nav";
 import About from "@/app/ui/about";
 import FeaturedProjects from "@/app/ui/featured-projects";
 import { Button } from "@/app/ui/button";
@@ -16,7 +17,9 @@ export default function Home() {
   };
 
   return (
-    <main className="pt-32 md:pt-40 overflow-x-hidden">
+    <>
+      <Nav />
+      <main className="pt-32 md:pt-40 overflow-x-hidden">
       <div className="max-w-5xl mx-auto space-y-20 md:space-y-40">
         <div className="flex justify-center px-4">
           <div className='flex-1 text-center max-w-3xl'>
@@ -83,5 +86,6 @@ export default function Home() {
         </motion.section>
       </div>
     </main>
+    </>
   );
 }
