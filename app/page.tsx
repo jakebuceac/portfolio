@@ -27,7 +27,7 @@ export default function Home() {
               Software engineer building reliable systems and polished applications.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button>
+              <Button href="/Jake Buceac CV.pdf" download>
                 <div className="flex items-center gap-2">
                   Download My CV 
                   <FaDownload size={14} />
