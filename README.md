@@ -78,3 +78,7 @@ pnpm run build
 ```
 
 The easiest way to deploy is using the [Vercel Platform](https://vercel.com) from the creators of Next.js.
+
+---
+
+Written by Jake Buceac, February 2026.
