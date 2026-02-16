@@ -1,9 +1,9 @@
 import ProjectCard from "@/app/ui/project-card";
 import Card from "@/app/ui/card";
+import { motion } from "motion/react";
 
 export default function FeaturedProjects() {
     const projects = [
-
         {
             title: "Portfolio (Front End)",
             description: "A modern portfolio website, showcasing my front end development work. Features smooth animations, responsive design, and integrated sections for about, skills, projects, and contact.",
@@ -45,9 +45,21 @@ export default function FeaturedProjects() {
     return (
         <Card>
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900">Featured Projects</h3>
-            <div className="mt-5 space-y-10">
-                {projects.map((project) => (
-                    <ProjectCard key={project.title} {...project} />
+            <div className="mt-5 space-y-15">
+                {projects.map((project, index) => (
+                    <motion.div
+                        key={project.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.1, margin: "-50px" }}
+                        transition={{ 
+                            duration: 0.6, 
+                            ease: 'easeOut',
+                            delay: index === 0 ? 0.1 : 0 
+                        }}
+                    >
+                        <ProjectCard {...project} />
+                    </motion.div>
                 ))}
             </div>
         </Card>

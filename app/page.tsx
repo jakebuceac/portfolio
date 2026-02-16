@@ -23,7 +23,7 @@ export default function Home() {
       <div className="max-w-5xl mx-auto space-y-20 md:space-y-40">
         <div className="flex justify-center px-4">
           <div className='flex-1 text-center max-w-3xl'>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900">
               Hi, I&apos;m Jake. <span className="wave-hand inline-block">👋</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
@@ -56,16 +56,12 @@ export default function Home() {
           <Skills />
         </motion.section>
 
-        <motion.section
+        <section
           id="projects"
           className="scroll-mt-32 p-4"
-          initial={{ opacity: 0, x: 100}}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.2 }}
         >
           <FeaturedProjects />
-        </motion.section>
+        </section>
 
         <motion.section
           id="contact"
