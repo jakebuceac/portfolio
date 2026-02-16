@@ -3,12 +3,22 @@ import Card from "@/app/ui/card";
 
 export default function FeaturedProjects() {
     const projects = [
+
+        {
+            title: "Portfolio (Front End)",
+            description: "A modern portfolio website, showcasing my front end development work. Features smooth animations, responsive design, and integrated sections for about, skills, projects, and contact.",
+            imageSrc: "/portfolio-preview.png",
+            imageAlt: "Portfolio Project Preview",
+            technologies: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Tailwind CSS", "Vercel"],
+            caseStudyLink: null,
+            gitHubLink: "https://github.com/jakebuceac/portfolio"
+        },
         {
             title: "in2tel Customer Portal (Full Stack)",
             description: "Redesigned and rewrote a centralised telecom portal serving as the primary interface for both customers and internal staff.",
             imageSrc: "/in2tel-preview.png",
             imageAlt: "in2tel Customer Project Preview",
-            technologies: ["PHP", "JavaScript", "Laravel", "Livewire", "Alpine.js", "Bootstrap", "MySQL", "Redis"],
+            technologies: ["PHP", "HTML", "CSS", "JavaScript", "Laravel", "Livewire", "Alpine.js", "Bootstrap", "MySQL", "Redis"],
             caseStudyLink: "https://in2tel.ie/in2tel-launches-new-customer-portal/",
             gitHubLink: null
         },
@@ -26,8 +36,8 @@ export default function FeaturedProjects() {
             description: "Engineered a full-stack application exploring the intersection of Generative AI and automated design, using OpenAI's Image API to programmatically generate and deliver personalised e-cards.",
             imageSrc: "/e-card-generator-preview.png",
             imageAlt: "E-Card Generator Web App Project Preview",
-            technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean", "GitHub Actions"],
-            caseStudyLink: "",
+            technologies: ["PHP", "HTML", "CSS", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean", "GitHub Actions"],
+            caseStudyLink: null,
             gitHubLink: "https://github.com/jakebuceac/e-card-generator-app"
         },
     ];

@@ -27,7 +27,7 @@ export default function Home() {
               Hi, I&apos;m Jake. <span className="wave-hand inline-block">👋</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
-              Software engineer building reliable systems and polished applications.
+              Software Engineer with 3+ years of experience building scalable web platforms and resilient backend systems.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button href="/Jake Buceac CV.pdf" download>

@@ -39,6 +39,8 @@ export default function Skills() {
             label: 'Infrastructure & Data',
             content: [
                 { name: "MySQL", icon: "/icons/mysql-icon.svg" },
+                { name: "PostgreSQL", icon: "/icons/postgresql-icon.svg" },
+                { name: "MongoDB", icon: "/icons/mongodb-icon.svg" },
                 { name: "Redis", icon: "/icons/redis-icon.svg" },
                 { name: "Docker", icon: "/icons/docker-icon.svg" },
                 { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
