@@ -14,10 +14,13 @@ export default function Skills() {
             content: [
                 { name: "PHP", icon: "/icons/php-icon.svg" },
                 { name: "Go", icon: "/icons/go-icon.svg" },
+                { name: "Python", icon: "/icons/python-icon.svg" },
+                { name: "Java", icon: "/icons/java-icon.svg" },
+                { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
+                { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
                 { name: "HTML", icon: "/icons/html-icon.svg" },
                 { name: "CSS", icon: "/icons/css-icon.svg" },
-                { name: "JavaScript", icon: "/icons/javascript-icon.svg" },
-                { name: "TypeScript", icon: "/icons/typescript-icon.svg" },
+                { name: "SQL", icon: "/icons/sql-icon.svg" },
             ]
         },
         {
@@ -25,10 +28,10 @@ export default function Skills() {
             content: [
                 { name: "Laravel", icon: "/icons/laravel-icon.svg" },
                 { name: "Symfony", icon: "/icons/symfony-icon.svg" },
-                { name: "React.js", icon: "/icons/reactjs-icon.svg" },
-                { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
                 { name: "Node.js", icon: "/icons/nodejs-icon.svg" },
                 { name: "Express.js", icon: "/icons/expressjs-icon.svg" },
+                { name: "React.js", icon: "/icons/reactjs-icon.svg" },
+                { name: "Next.js", icon: "/icons/nextjs-icon.svg" },
                 { name: "Livewire", icon: "/icons/livewire-icon.svg" },
                 { name: "Alpine.js", icon: "/icons/alpinejs-icon.svg" },
                 { name: "Tailwind CSS", icon: "/icons/tailwind-icon.svg" },
@@ -38,14 +41,16 @@ export default function Skills() {
         {
             label: 'Infrastructure & Data',
             content: [
-                { name: "MySQL", icon: "/icons/mysql-icon.svg" },
-                { name: "PostgreSQL", icon: "/icons/postgresql-icon.svg" },
-                { name: "MongoDB", icon: "/icons/mongodb-icon.svg" },
-                { name: "Redis", icon: "/icons/redis-icon.svg" },
-                { name: "Docker", icon: "/icons/docker-icon.svg" },
-                { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
+                { name: "AWS", icon: "/icons/aws-icon.svg" },
+                { name: "Google Cloud", icon: "/icons/google-cloud-icon.svg" },
                 { name: "DigitalOcean", icon: "/icons/digital-ocean-icon.svg" },
                 { name: "Vercel", icon: "/icons/vercel-icon.svg" },
+                { name: "Docker", icon: "/icons/docker-icon.svg" },
+                { name: "GitHub Actions", icon: "/icons/github-actions-icon.svg" },
+                { name: "RabbitMQ", icon: "/icons/rabbitmq-icon.svg" },
+                { name: "Redis", icon: "/icons/redis-icon.svg" },
+                { name: "PostgreSQL", icon: "/icons/postgresql-icon.svg" },
+                { name: "MySQL", icon: "/icons/mysql-icon.svg" },
             ]
         }
         

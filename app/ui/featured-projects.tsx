@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 export default function FeaturedProjects() {
     const projects = [
         {
-            title: "Portfolio (Front End)",
-            description: "A modern portfolio website, showcasing my front end development work. Features smooth animations, responsive design, and integrated sections for about, skills, projects, and contact.",
+            title: "Portfolio (Frontend)",
+            description: "A modern portfolio website, showcasing my frontend development work. Features smooth animations, responsive design, and integrated sections for about, skills, projects, and contact.",
             imageSrc: "/portfolio-preview.png",
             imageAlt: "Portfolio Project Preview",
-            technologies: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Tailwind CSS", "Vercel"],
+            technologies: [ "JavaScript", "TypeScript", "React.js", "Tailwind CSS", "HTML", "CSS", "Vercel"],
             caseStudyLink: null,
             gitHubLink: "https://github.com/jakebuceac/portfolio"
         },
@@ -18,16 +18,16 @@ export default function FeaturedProjects() {
             description: "Redesigned and rewrote a centralised telecom portal serving as the primary interface for both customers and internal staff.",
             imageSrc: "/in2tel-preview.png",
             imageAlt: "in2tel Customer Project Preview",
-            technologies: ["PHP", "HTML", "CSS", "JavaScript", "Laravel", "Livewire", "Alpine.js", "Bootstrap", "MySQL", "Redis"],
+            technologies: ["PHP", "Laravel", "Livewire", "Alpine.js", "JavaScript", "Bootstrap", "HTML", "CSS", "SQL", "MySQL", "Redis"],
             caseStudyLink: "https://in2tel.ie/in2tel-launches-new-customer-portal/",
             gitHubLink: null
         },
         {
-            title: "American Red Cross Blood Donor App (Back End)",
-            description: "Maintained and supported the API powering the American Red Cross Blood Donor mobile app, ensuring reliable data delivery and seamless integration with the app’s front-end.",
+            title: "American Red Cross Blood Donor App (Backend)",
+            description: "Maintained and supported the API powering the American Red Cross Blood Donor mobile app, ensuring reliable data delivery and seamless integration with the app’s frontend.",
             imageSrc: "/blood-preview.png",
             imageAlt: "American Red Cross Blood Donor Project Preview",
-            technologies: ["PHP", "Laravel", "MySQL", "Redis"],
+            technologies: ["PHP", "Laravel", "SQL", "MySQL", "Redis", "AWS"],
             caseStudyLink: "https://3sidedcube.com/projects/saving-lives-with-the-worlds-first-blood-tracking-app",
             gitHubLink: null
         },
@@ -36,7 +36,7 @@ export default function FeaturedProjects() {
             description: "Engineered a full-stack application exploring the intersection of Generative AI and automated design, using OpenAI's Image API to programmatically generate and deliver personalised e-cards.",
             imageSrc: "/e-card-generator-preview.png",
             imageAlt: "E-Card Generator Web App Project Preview",
-            technologies: ["PHP", "HTML", "CSS", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "MySQL", "DigitalOcean", "GitHub Actions"],
+            technologies: ["PHP", "JavaScript", "Laravel", "React.js", "Tailwind CSS", "HTML", "CSS", "SQL", "MySQL", "GitHub Actions", "DigitalOcean"],
             caseStudyLink: null,
             gitHubLink: "https://github.com/jakebuceac/e-card-generator-app"
         },
